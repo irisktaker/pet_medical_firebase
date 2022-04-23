@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_medical/models/pets.dart';
+import 'package:pet_medical/view/widgets/pet_details.dart';
 
 class PetRoom extends StatelessWidget {
   final Pet pet;
@@ -11,6 +12,7 @@ class PetRoom extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           // TODO Change title
+
           title: Text(pet.name),
           leading: IconButton(
               icon: const Icon(Icons.arrow_back),
@@ -19,7 +21,8 @@ class PetRoom extends StatelessWidget {
               }),
         ),
         // TODO Add pet detail
-        body: const Text('Pet Details Comes Here'),
+
+        body: PetDetail(pet: pet),
       ),
     );
   }
