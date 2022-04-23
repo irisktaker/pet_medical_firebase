@@ -1,4 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:pet_medical/models/pets.dart';
+import 'package:pet_medical/models/vaccination.dart';
+
 class VaccinationList extends StatelessWidget {
+  // ...
   final Pet pet;
   final Widget Function(Vaccination) buildRow;
   const VaccinationList({Key? key, required this.pet, required this.buildRow})

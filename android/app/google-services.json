@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978522086722",
+    "project_id": "petmedical-affd7",
+    "storage_bucket": "petmedical-affd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978522086722:android:ccf56d7beb973fb4e67cdb",
+        "android_client_info": {
+          "package_name": "com.example.pet_medical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978522086722-83cicfjpmdchpf0tjfvdhhnvjrcf4so9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEk4Pl84zMOZrMeq-82lbHixGqwfJxQAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978522086722-83cicfjpmdchpf0tjfvdhhnvjrcf4so9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
