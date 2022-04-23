@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_medical/models/pets.dart';
 import 'package:pet_medical/utils/pets_icons.dart';
+import 'package:pet_medical/view/screens/pet_room.dart';
 
 class PetCard extends StatelessWidget {
   //..
@@ -32,7 +33,13 @@ class PetCard extends StatelessWidget {
         ],
       ),
       // TODO Add pet room navigation
-      onTap: () {},
+      onTap: () => Navigator.push<Widget>(
+        context,
+        MaterialPageRoute(
+          builder: (context) => PetRoom(pet: pet),
+        ),
+      ),
+
       splashColor: splashColor[pet.type],
     ));
   }

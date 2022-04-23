@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
+import 'package:pet_medical/models/pets.dart';
 
 class PetRoom extends StatelessWidget {
-
-  const PetRoom({Key? key}) : super(key: key);
+  final Pet pet;
+  const PetRoom({Key? key, required this.pet}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class PetRoom extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           // TODO Change title
-          title: const Text('name'),
+          title: Text(pet.name),
           leading: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
