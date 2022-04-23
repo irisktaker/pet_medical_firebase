@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pet_medical/models/pets.dart';
+import 'package:pet_medical/repository/data_repository.dart';
 
 class AddPetDialog extends StatefulWidget {
   const AddPetDialog({Key? key}) : super(key: key);
@@ -12,6 +14,7 @@ class _AddPetDialogState extends State<AddPetDialog> {
   String character = '';
 
   // TODO Add Data Repository
+  final DataRepository repository = DataRepository();
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +68,18 @@ class _AddPetDialogState extends State<AddPetDialog> {
                 Navigator.of(context).pop();
               },
               child: const Text('Cancel')),
-          TextButton(onPressed: () {
-            // TODO Add New Pet to repository
-          }, child: const Text('Add')),
+          TextButton(
+              onPressed: () {
+                // TODO Add New Pet to repository
+
+                if (petName != null && character.isNotEmpty) {
+                  final newPet =
+                      Pet(petName!, type: character, vaccinations: []);
+                  repository.addPet(newPet);
+                  Navigator.of(context).pop();
+                }
+              },
+              child: const Text('Add')),
         ]);
   }
 }
